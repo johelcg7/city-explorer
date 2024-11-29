@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import {
     Container,
     Row,
@@ -33,6 +33,7 @@ const Explorer = () => {
             setLongitude(response.data[0].lon);
             setDisplayMap(true);
             setDisplayError(false);
+            console.log(response);
         } catch (error) {
             setDisplayMap(false);
             setDisplayError(true);

@@ -11,17 +11,13 @@ function CitySearch(props) {
     };
 
     return (
-        <InputGroup onSubmit={handleSubmit} className="mb-3">
-            <Form.Control
-                onChange={props.updateCity}
-                placeholder="Ingresa una dirección"
-                aria-label="Ingresa una dirección"
-                aria-describedby="basic-addon2"
-            />
+        <Form onSubmit={handleSubmit} className="mb-3">
+            <Form.Label>Ingresa cualquier dirección, no te limites:</Form.Label>
+            <Form.Control onChange={props.updateCity} type="text" placeholder="Ingresa una dirección"/>
             <Button type= "submit" variant="outline-secondary" id="button-addon2">
                 Explora
             </Button>
-        </InputGroup>
+        </Form>
     )
 }
 
